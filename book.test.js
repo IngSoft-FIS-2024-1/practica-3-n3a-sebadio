@@ -18,4 +18,16 @@ describe('Book', () => {
   it('should return the correct number of pages', () => {
     expect(myBook.getPages()).toBe(350);
   });
+
+  it('should check title is not empty', () => {
+    expect(() => myBook = new Book('', 'Horacio Quiroga', 350)).toThrow();
+  });
+
+  it('should check page param is a number', () => {
+    expect(() => myBook = new Book('Cuentos de la Selva', 'Horacio Quiroga', '350')).toThrow();
+  });
+
+  it('should check pages not < 1', () => {
+    expect(() => myBook = new Book('Cuentos de la Selva', 'Horacio Quiroga', 0)).toThrow();
+  });
 });
