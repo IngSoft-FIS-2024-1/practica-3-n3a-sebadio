@@ -28,21 +28,33 @@
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-library" role="tabpanel" aria-labelledby="pills-library-tab"
             tabindex="0">
+            <h2 class="library-name">Nombre</h2>
             <form action="">
-                <label for="summary">Resumen</label>
-                <input name="summary" type="text">
+                <label for="total-books">Total libros:</label>
+                <input name="total-books" type="text" readonly>
             </form>
         </div>
         <div class="tab-pane fade" id="pills-newbook" role="tabpanel" aria-labelledby="pills-newbook-tab" tabindex="0">
             <form action="">
-                <label for="book-title">Título:</label>
-                <input name="book-title" type="text">
+                <label for="book-title">Título:
+                    <input name="book-title" type="text" required>
+                </label>
+                <label for="book-author">Autor:
+                    <input name="book-author" type="text"></label>
+
+                <label for="book-pages">Páginas:
+                    <input name="book-pages" type="number" min="1" required>
+                </label>
+                <div class="form-row">
+                    <input type="submit" name="add-book" value="Agregar libro">
+                </div>
+
             </form>
         </div>
         <div class="tab-pane fade" id="pills-inventory" role="tabpanel" aria-labelledby="pills-inventory-tab"
             tabindex="0">
             <h2 class="position-absolute top-50 start-50 translate-middle" id="empty-list">No ha ingresado ningún
-                libro :(</h2>
+                libro</h2>
             <div id="inventory" class="container shadow bg-white rounded mt-4 p-2 d-none">
                 <h2 class="title ps-2">Países: </h2>
                 <ul id="book-list" class="list-group-numbered">
@@ -54,6 +66,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
