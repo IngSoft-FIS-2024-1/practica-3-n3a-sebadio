@@ -46,6 +46,10 @@ class Book {
     pages = Math.trunc(pages);
     this.pages = pages;
   }
+
+  toString() {
+    return `Titulo: ${this.title} Autor: ${this.autorl} Paginas: ${this.pages}`;
+  }
 }
 
 export default Book;
