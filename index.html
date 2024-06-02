@@ -28,37 +28,43 @@
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-library" role="tabpanel" aria-labelledby="pills-library-tab"
             tabindex="0">
-            <h2 class="library-name">Nombre</h2>
+            <h2 id="library-name"></h2>
             <form action="">
-                <label for="total-books">Total libros:</label>
-                <input id="inp-total-books" name="total-books" type="text" readonly>
+                <label for="inp-total-books">Total libros:
+                    <input id="inp-total-books" name="inp-total-books" type="text" readonly>
+                </label>
             </form>
         </div>
-        <div class="tab-pane fade" id="pills-newbook" role="tabpanel" aria-labelledby="pills-newbook-tab" tabindex="0">
+        <div class="tab-pane fade" id="pills-newbook" role="tabpanel" aria-labelledby="pills-newbook-tab" tabindex="1">
             <form>
-                <label for="inp-title">Título:
-                    <input id="inp-title" name="inp-title" type="text" required>
-                </label>
-                <label for="inp-author">Autor:
-                    <input id="inp-author" name="inp-author" type="text">
-                </label>
-                <label for="inp-pages">Páginas:
-                    <input id="inp-pages" name="inp-pages" type="number" min="1" required>
-                </label>
+                <div class="form-row">
+                    <label for="inp-title">Título:
+                        <input id="inp-title" name="inp-title" type="text" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label for="inp-author">Autor:
+                        <input id="inp-author" name="inp-author" type="text">
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label for="inp-pages">Páginas:
+                        <input id="inp-pages" name="inp-pages" type="number" min="1" required>
+                    </label>
+                </div>
                 <div class="d-none" id="add-book-error">
                     <p class="text-danger pt-2" id="add-book-error-msg"></p>
-                  </div>
+                </div>
                 <div class="form-row">
-                    <button id="btn-add" type="button" class="btn-primary">Agregar</button>
+                    <button id="btn-add" type="button" class="btn btn-primary">Agregar</button>
                 </div>
             </form>
         </div>
         <div class="tab-pane fade" id="pills-inventory" role="tabpanel" aria-labelledby="pills-inventory-tab"
-            tabindex="0">
-            <h2 class="position-absolute top-50 start-50 translate-middle" id="empty-book-list">No ha ingresado ningún
-                libro</h2>
-            <div id="book-list-container" class="container shadow bg-white rounded mt-4 p-2 d-none">
-                <h2 class="title ps-2">Libros: </h2>
+            tabindex="2">
+            <h2 id="empty-book-list">No ha ingresado ningún libro</h2>
+            <div id="book-list-container" class="container d-none">
+                <h2 class="title">Libros: </h2>
                 <ul id="book-list" class="list-group-numbered">
                 </ul>
             </div>

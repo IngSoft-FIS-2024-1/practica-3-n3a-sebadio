@@ -1,5 +1,6 @@
 import Library from './library.js';
 
+const libraryName = document.getElementById('library-name');
 const inpTotalBooks = document.getElementById('inp-total-books');
 const btnAdd = document.getElementById('btn-add');
 const inpTitle = document.getElementById('inp-title');
@@ -7,6 +8,7 @@ const inpAuthor = document.getElementById('inp-author');
 const inpPages = document.getElementById('inp-pages');
 
 const myLibrary = new Library('Montevideo');
+libraryName.innerHTML = myLibrary.getName();
 
 function updateTotalBooks() {
   inpTotalBooks.value = myLibrary.totalBooks();
