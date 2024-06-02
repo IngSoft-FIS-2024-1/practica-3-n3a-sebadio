@@ -19,6 +19,10 @@ describe('Book', () => {
     expect(myBook.getPages()).toBe(350);
   });
 
+  it('should check title is a string', () => {
+    expect(() => myBook = new Book(451, 1, 350)).toThrow();
+  });
+
   it('should check title is not empty', () => {
     expect(() => myBook = new Book('', 'Horacio Quiroga', 350)).toThrow();
   });
