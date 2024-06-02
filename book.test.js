@@ -23,6 +23,10 @@ describe('Book', () => {
     expect(() => myBook = new Book('', 'Horacio Quiroga', 350)).toThrow();
   });
 
+  it('should check author is a string', () => {
+    expect(() => myBook = new Book('Cuentos de la Selva', 1, 350)).toThrow();
+  });
+
   it('should check page param is a number', () => {
     expect(() => myBook = new Book('Cuentos de la Selva', 'Horacio Quiroga', '350')).toThrow();
   });
