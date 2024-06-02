@@ -48,7 +48,7 @@ class Book {
   }
 
   toString() {
-    return `Titulo: ${this.title} Autor: ${this.autorl} Paginas: ${this.pages}`;
+    return `Título: ${this.title} Autor: ${this.author} Páginas: ${this.pages}`;
   }
 }
 
