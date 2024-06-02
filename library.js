@@ -22,7 +22,7 @@ class Library {
         this.books.push(newBook);
     }
     totalBooks() {
-        return this.books.lenght;
+        return this.books.length;
     }
 }
 export default Library;
