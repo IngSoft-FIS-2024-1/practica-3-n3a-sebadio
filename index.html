@@ -31,25 +31,25 @@
             <h2 class="library-name">Nombre</h2>
             <form action="">
                 <label for="total-books">Total libros:</label>
-                <input name="total-books" type="text" readonly>
+                <input id="inp-total-books" name="total-books" type="text" readonly>
             </form>
         </div>
         <div class="tab-pane fade" id="pills-newbook" role="tabpanel" aria-labelledby="pills-newbook-tab" tabindex="0">
-            <form action="">
-                <label for="book-title">Título:
-                    <input name="book-title" type="text" required>
+            <form>
+                <label for="inp-title">Título:
+                    <input id="inp-title" name="inp-title" type="text" required>
                 </label>
-                <label for="book-author">Autor:
-                    <input name="book-author" type="text"></label>
-
-                <label for="book-pages">Páginas:
-                    <input name="book-pages" type="number" min="1" required>
+                <label for="inp-author">Autor:
+                    <input id="inp-author" name="inp-author" type="text">
+                </label>
+                <label for="inp-pages">Páginas:
+                    <input id="inp-pages" name="inp-pages" type="number" min="1" required>
                 </label>
                 <div class="d-none" id="add-book-error">
                     <p class="text-danger pt-2" id="add-book-error-msg"></p>
                   </div>
                 <div class="form-row">
-                    <button id="btn-add">
+                    <button id="btn-add" type="button" class="btn-primary">Agregar</button>
                 </div>
             </form>
         </div>

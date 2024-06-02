@@ -1,8 +1,8 @@
 import Book from './book.js'
 class Library {
+    inventory = [];
     constructor(name) {
         this.name = name;
-        this.books = [];
     }
     setName(name) {
         if (typeof (name) !== 'string') {
@@ -19,10 +19,10 @@ class Library {
     }
     addBook(title, author, pages) {
         const newBook = new Book(title, author, pages);
-        this.books.push(newBook);
+        this.inventory.push(newBook);
     }
     totalBooks() {
-        return this.books.length;
+        return this.inventory.length;
     }
 }
 export default Library;
