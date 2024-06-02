@@ -1,5 +1,5 @@
-import Library from './library.js';
-import Book from './book.js';
+import Library from '../library.js';
+import Book from '../book.js';
 
 describe('Library', () => {
   let myLibrary;
@@ -10,8 +10,9 @@ describe('Library', () => {
 
   it('should add a book to the library', () => {
     myLibrary.addBook('Cuentos de la Selva', 'Horacio Quiroga', 120);
-    expect(myLibrary.books[0]).toBeInstanceOf(Book);
-    expect(myLibrary.books[0].getTitle()).toBe('Cuentos de la Selva');
+    const aBook = myLibrary.inventory[myLibrary.inventory.length - 1];
+    expect(aBook).toBeInstanceOf(Book);
+    expect(aBook.getTitle()).toBe('Cuentos de la Selva');
   });
 
   it('should return the total number of books', () => {

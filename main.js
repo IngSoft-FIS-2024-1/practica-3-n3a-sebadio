@@ -1,4 +1,4 @@
-import Library from './library.js';
+import Library from './domain/library.js';
 
 const libraryName = document.getElementById('library-name');
 const inpTotalBooks = document.getElementById('inp-total-books');
@@ -38,7 +38,7 @@ function updateInventory() {
   emptyBookList.classList.add('d-none');
   bookListContainer.classList.remove("d-none");
 
-  const addedBook = myLibrary.inventory.pop();
+  const addedBook = myLibrary.inventory[myLibrary.inventory.length - 1];
   let newListElement = document.createElement("li");
   newListElement.classList.add("list-group-item");
   newListElement.innerText = addedBook.toString();

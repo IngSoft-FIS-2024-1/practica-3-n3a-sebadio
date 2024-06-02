@@ -1,4 +1,5 @@
 class Book {
+  
   constructor(title, author, pages) {
     this.setTitle(title);
     this.setAuthor(author);
@@ -15,6 +16,10 @@ class Book {
 
   getPages() {
     return this.pages;
+  }
+
+  getWords() {
+    // TODO
   }
 
   setTitle(title) {
@@ -45,6 +50,14 @@ class Book {
     }
     pages = Math.trunc(pages);
     this.pages = pages;
+  }
+
+  setWords() {
+    // TODO
+  }
+
+  wordsPerPage() {
+    // TODO
   }
 
   toString() {
