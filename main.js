@@ -22,7 +22,7 @@ function updateInventory() {
   emptyBookList.classList.add('d-none');
   bookListContainer.classList.remove('d-none');
 
-  const addedBook = myLibrary.inventory[myLibrary.inventory.length - 1];
+  const addedBook = myLibrary.getInventory()[myLibrary.getInventory().length - 1];
   let newListElement = document.createElement('li');
   newListElement.classList.add('list-group-item');
   newListElement.innerText = addedBook.toString();
