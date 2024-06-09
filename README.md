@@ -15,7 +15,9 @@
 * La cobertura de los test unitarios debe alcanzar 100 % de sentencias y ramas.
 * Ejecute el linter con `npm run lint` para eliminar errores y warnings.
 
-> Recuerde al finalizar cada parte: realizar commit, push al repositorio remoto y subir un issue con una captura de pantalla.
+> Recuerde al finalizar cada parte: 
+> * realizar commit / push
+> * subir un issue con screenshots
 
 ### Parte A
 
