@@ -1,4 +1,4 @@
-import {describe, it, expect, beforeEach} from '@jest/globals';
+import { describe, it, expect, beforeEach } from '@jest/globals';
 import Library from '../library.js';
 import Book from '../book.js';
 
@@ -6,12 +6,12 @@ describe('Library', () => {
   let myLibrary;
 
   beforeEach(() => {
-    myLibrary = new Library();
+    myLibrary = new Library('Biblioteca');
   });
 
   it('add a book to the library', () => {
     myLibrary.addBook('Cuentos de la Selva', 'Horacio Quiroga', 120);
-    const aBook = myLibrary.inventory[myLibrary.inventory.length - 1];
+    const aBook = myLibrary.getInventory()[myLibrary.getInventory().length - 1];
     expect(aBook).toBeInstanceOf(Book);
     expect(aBook.getTitle()).toBe('Cuentos de la Selva');
   });
@@ -26,12 +26,12 @@ describe('Library', () => {
     myLibrary.setName('Montevideo');
     expect(myLibrary.getName()).toBe('Montevideo');
   });
-  
+
   it('throw an error when setting an invalid name', () => {
     expect(() => myLibrary.setName(123)).toThrow();
   });
   it('throw an error when setting an empty name', () => {
     // TODO
   });
-  
+
 });
