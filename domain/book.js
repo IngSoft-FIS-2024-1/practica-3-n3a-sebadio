@@ -42,7 +42,7 @@ class Book {
   }
 
   setPages(pages) {
-    if (typeof (pages) !== 'number' && !isNaN(pages)) {
+    if (typeof (pages) !== 'number' || isNaN(pages)) {
       throw new Error();
     }
     if (pages < 1) {
