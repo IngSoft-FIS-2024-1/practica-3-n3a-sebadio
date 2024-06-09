@@ -14,22 +14,6 @@ function updateTotalBooks() {
   inpTotalBooks.value = myLibrary.totalBooks();
 }
 
-function loadInventory() {
-  const emptyBookList = document.getElementById("empty-book-list");
-  const bookListContainer = document.getElementById("book-list-container");
-  const bookList = document.getElementById("book-list");
-
-  emptyBookList.classList.add('d-none');
-  bookListContainer.classList.remove("d-none");
-
-  myLibrary.inventory.forEach(book => {
-    let newListElement = document.createElement("li");
-    newListElement.classList.add("list-group-item");
-    newListElement.innerText = book.toString();
-    bookList.appendChild(newListElement);
-  });
-}
-
 function updateInventory() {
   const emptyBookList = document.getElementById("empty-book-list");
   const bookListContainer = document.getElementById("book-list-container");
