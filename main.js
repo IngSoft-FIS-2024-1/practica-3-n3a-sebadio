@@ -7,7 +7,7 @@ const inpTitle = document.getElementById('inp-title');
 const inpAuthor = document.getElementById('inp-author');
 const inpPages = document.getElementById('inp-pages');
 
-const myLibrary = new Library('Montevideo');
+const myLibrary = new Library('Papiros');
 libraryName.innerHTML = myLibrary.getName();
 
 function updateTotalBooks() {
