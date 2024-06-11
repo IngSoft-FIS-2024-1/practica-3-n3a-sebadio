@@ -2,6 +2,9 @@ import {describe, it, expect, beforeEach} from '@jest/globals';
 import Book from '../book.js';
 
 describe('Book', () => {
+  /**
+   * @type {Book}
+   */
   let myBook;
 
   beforeEach(() => {
@@ -29,18 +32,48 @@ describe('Book', () => {
   });
 
   it('check author is a string', () => {
-    // TODO
+    expect(()=> typeof myBook.getAuthor === 'string');
+  });
+
+  it('setAuthor is not string', () => {
+    expect(()=> new Book('Hola', 143, 32) ).toThrow();
+  });
+
+  it('if setAuthor is empty, set author to "Anónimo"', () => {
+    const author = new Book('Hola', '', 32).getAuthor();
+    expect(author).toBe('Anónimo');
+  });
+
+  it('setPages param has to be a number', ()=>{
+    expect(()=> myBook.setPages('143')).toThrow();
+  });
+
+  it('setWords param has to be a number', ()=>{
+    expect(()=> myBook.setWords('143')).toThrow();
+  });
+
+  it('setWords param cannot be lower than zero', ()=>{
+    expect(()=> myBook.setWords(-2)).toThrow();
+  });
+
+  it('words per page is calculated correctly', ()=>{
+    myBook.setWords(70000);
+    const wpp = 70000 / 350;
+    const mbWpp = myBook.wordsPerPage();
+    expect(mbWpp).toBe(wpp);
   });
 
   it('check page param is a number', () => {
-    // TODO
+    expect(()=> typeof myBook.getPages() === 'number');
   });
 
   it('check pages not < 1', () => {
-    // TODO
+    expect(()=> new Book('Hola que tal', 'El vecino', -2)).toThrow();
   });
+
   it('toString()', () => {
-    // TODO
+    const expectedOutput = `Título: ${myBook.getTitle()} Autor: ${myBook.getAuthor()} Páginas: ${myBook.getPages()} Words: ${myBook.getWords()}`;
+    expect(myBook.toString()).toBe(expectedOutput);
   });
 
 });
