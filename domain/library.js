@@ -42,10 +42,9 @@ class Library {
 
   totalWords() {
     let total = 0;
-    for (const book of this.#inventory) {
+    for (const book of this.getInventory()) {
       total += book.getWords();
     }
-
     return total;
   }
 }
